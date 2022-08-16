@@ -1,9 +1,12 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList() {
+function PlantList(props) {
+  console.log(props.plants.name)
   return (
-    <ul className="cards">{/* render PlantCards components in here */}</ul>
+    <PlantCard>
+      <ul className="cards" name={props.plants.name} image={props.plants.image} price={props.plants.price} />
+      </PlantCard>
   );
 }
 
